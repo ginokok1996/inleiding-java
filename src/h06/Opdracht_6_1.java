@@ -5,12 +5,11 @@ import java.applet.*;
 
 public class Opdracht_6_1 extends Applet{
     double verdiend, verdeeld;
-    
+
     public void init(){
         verdiend = 113;
         verdeeld = verdiend / 4;
     }
-
     public void paint(Graphics g){
         g.drawString("Jan krijgt: " + verdeeld + " euro", 30,30);
         g.drawString("Ali krijgt: " + verdeeld + " euro", 30,50);
