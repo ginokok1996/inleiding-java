@@ -8,8 +8,8 @@ import java.awt.event.ActionListener;
 
 
 public class Praktijkopdracht  extends Applet{
-    TextField tekst1;
-    TextField tekst2;
+    TextField eerstecijfer;
+    TextField tweedecijfer;
     Button plus;
     Button min;
     Button keer;
@@ -17,8 +17,8 @@ public class Praktijkopdracht  extends Applet{
     double nummer1, nummer2, antwoord;
 
     public void init(){
-        tekst1 = new TextField("",20);
-        tekst2 = new TextField("", 20);
+        eerstecijfer = new TextField("",20);
+        tweedecijfer = new TextField("", 20);
         plus = new Button("+");
         plus.addActionListener(new pluslistener());
         min = new Button("-");
@@ -28,8 +28,8 @@ public class Praktijkopdracht  extends Applet{
         delen = new Button("/");
         delen.addActionListener(new delenlistener());
 
-        add(tekst1);
-        add(tekst2);
+        add(eerstecijfer);
+        add(tweedecijfer);
         add(plus);
         add(min);
         add(keer);
@@ -42,11 +42,11 @@ public class Praktijkopdracht  extends Applet{
     //listener voor het optellen van de 2 cijfers.
     class pluslistener implements ActionListener{
         public void actionPerformed(ActionEvent e){
-            nummer1 = Double.parseDouble(tekst1.getText());
-            nummer2 = Double.parseDouble(tekst2.getText());
+            nummer1 = Double.parseDouble(eerstecijfer.getText());
+            nummer2 = Double.parseDouble(tweedecijfer.getText());
             antwoord = nummer1 + nummer2;
-            tekst1.setText("" + antwoord);
-            tekst2.setText("");
+            eerstecijfer.setText("" + antwoord);
+            tweedecijfer.setText("");
             repaint();
         }
     }
@@ -54,11 +54,11 @@ public class Praktijkopdracht  extends Applet{
     //listener voor het aftrekken van de 2 cijfers.
     class minlistener implements ActionListener{
         public void actionPerformed(ActionEvent e){
-            nummer1 = Double.parseDouble(tekst1.getText());
-            nummer2 = Double.parseDouble(tekst2.getText());
+            nummer1 = Double.parseDouble(eerstecijfer.getText());
+            nummer2 = Double.parseDouble(tweedecijfer.getText());
             antwoord = nummer1 - nummer2;
-            tekst1.setText("" + antwoord);
-            tekst2.setText("");
+            eerstecijfer.setText("" + antwoord);
+            tweedecijfer.setText("");
             repaint();
         }
     }
@@ -66,11 +66,11 @@ public class Praktijkopdracht  extends Applet{
     //listener voor het vermedigvuldigen van de 2 cijfers.
     class keerlistener implements ActionListener{
         public void actionPerformed(ActionEvent e){
-            nummer1 = Double.parseDouble(tekst1.getText());
-            nummer2 = Double.parseDouble(tekst2.getText());
+            nummer1 = Double.parseDouble(eerstecijfer.getText());
+            nummer2 = Double.parseDouble(tweedecijfer.getText());
             antwoord = nummer1 * nummer2;
-            tekst1.setText("" + antwoord);
-            tekst2.setText("");
+            eerstecijfer.setText("" + antwoord);
+            tweedecijfer.setText("");
             repaint();
         }
     }
@@ -78,11 +78,11 @@ public class Praktijkopdracht  extends Applet{
     //listener voor het delen van de 2 cijfers.
     class delenlistener implements ActionListener{
         public void actionPerformed(ActionEvent e){
-            nummer1 = Double.parseDouble(tekst1.getText());
-            nummer2 = Double.parseDouble(tekst2.getText());
+            nummer1 = Double.parseDouble(eerstecijfer.getText());
+            nummer2 = Double.parseDouble(tweedecijfer.getText());
             antwoord = nummer1 / nummer2;
-            tekst1.setText("" + antwoord);
-            tekst2.setText("");
+            eerstecijfer.setText("" + antwoord);
+            tweedecijfer.setText("");
             repaint();
         }
     }
